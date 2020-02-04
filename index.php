@@ -15,11 +15,6 @@ include 'layout/head.php';
             </div>
         </div>
         <div id="rooms-sec">
-            <?php
-
-                print $_SESSION['message'];
-                $_SESSION['message'] = null;
-            ?>
             <table>
                 <thead>
                     <tr>

@@ -50,6 +50,10 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style-type: none;
+}
+
 header {
   height: 80px;
   background-color: black;
@@ -67,7 +71,6 @@ header #header-container h1 {
 }
 
 header #header-container ul {
-  list-style-type: none;
   float: left;
   margin-left: 20px;
 }
