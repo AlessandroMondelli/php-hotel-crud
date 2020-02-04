@@ -34,7 +34,7 @@ include 'layout/head.php';
                                     <a class="button info" href="details.php?id_stanza=<?php echo $row['id']; ?>">
                                         Visualizza
                                     </a>
-                                    <a class="button mod" href="">
+                                    <a class="button mod" href="mod.php?id_stanza=<?php echo $row['id'];?>">
                                         Modifica
                                     </a>
                                     <a class="button el" href="">

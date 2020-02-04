@@ -1,5 +1,4 @@
 <?php
-
 include 'functions.php'; //Richiamo file con funzioni
 
 $sql = "SELECT * FROM stanze WHERE id = " . $_GET['id_stanza']; //Query per prendere dati stanza
