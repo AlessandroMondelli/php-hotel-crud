@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header {
+  height: 80px;
+  background-color: black;
+  color: white;
+}
+
+header #header-container {
+  width: 98%;
+  margin: 0 auto;
+  line-height: 80px;
+}
+
+header #header-container h1 {
+  float: left;
+}
+
+header #header-container ul {
+  list-style-type: none;
+  float: left;
+  margin-left: 20px;
+}
+
+header #header-container ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
