@@ -7,3 +7,6 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
+    <?php
+    include 'layout/header.html'; //Richiamo header
+    ?>

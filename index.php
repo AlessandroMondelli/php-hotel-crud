@@ -3,8 +3,7 @@ include 'functions.php';
 $sql = "SELECT id, room_number, floor FROM stanze"; //Stampo tutte le stanze del db
 $result = esegui_query($sql); //Eseguo query
 
-include 'layout/head.html';
-include 'layout/header.html';
+include 'layout/head.php';
 ?>
 
 <main>
@@ -12,10 +11,15 @@ include 'layout/header.html';
         <div id="sec-title">
             <h2>Stanze Hotel</h2>
             <div class="to-right clearfix">
-                <button class="button ok" type="button">Crea una nuova stanza</button>
+                <a href="create-room.php" class="button ok">Crea una nuova stanza</a>
             </div>
         </div>
         <div id="rooms-sec">
+            <?php
+
+                print $_SESSION['message'];
+                $_SESSION['message'] = null;
+            ?>
             <table>
                 <thead>
                     <tr>
@@ -59,6 +63,7 @@ include 'layout/header.html';
                     }
                     ?>
                 </tbody>
+            </table>
         </div>
     </div>
 </main>
