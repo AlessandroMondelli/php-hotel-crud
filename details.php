@@ -1,7 +1,12 @@
 <?php
 include 'functions.php'; //Richiamo file con funzioni
 
-$sql = "SELECT * FROM stanze WHERE id = " . $_GET['id_stanza']; //Query per prendere dati stanza
+$sql = "SELECT *
+        FROM stanze
+        JOIN prenotazioni ON prenotazioni.stanza_id = stanze.id
+        JOIN pagamenti ON  prenotazioni.id = pagamenti.prenotazione_id
+        JOIN paganti ON  pagamenti.pagante_id = paganti.id
+        WHERE stanze.id = " . $_GET['id_stanza']; //Query per prendere dati stanza
 $result = esegui_query($sql);
 
 include 'layout/head.php';
@@ -26,7 +31,20 @@ include 'layout/head.php';
                     <li>Data creazione: <?php echo $row['created_at']; ?></li>
                     <li>Data ultima modifica: <?php echo $row['updated_at']; ?></li>
                 </ul>
+                <div class="prenotazione">
+                    <p>Prenotazioni</p>
                 <?php
+                while ($row = $result->fetch_assoc()) { //Scorro risultati con funzione fetch assoc ?>
+                    <ul>
+                        <li>Nome pagante: <?php echo $row['name']; ?></li>
+                        <li>Cognome pagante: <?php echo $row['lastname']; ?></li>
+                        <li>Stato pagamento: <?php echo $row['status']; ?></li>
+                        <li>Prezzo: <?php echo $row['price']; ?></li>
+                    </ul>
+                <?php
+                }?>
+                </div>
+            <?php
             } elseif ($result) { ?>
                 <p>Non ci sono risultati</p>
                 <?php

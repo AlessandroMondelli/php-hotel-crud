@@ -135,3 +135,17 @@ main #action-es #not-succ {
   padding: 5px;
 }
 
+main .prenotazione {
+  margin-top: 20px;
+}
+
+main .prenotazione p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+main .prenotazione ul {
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
