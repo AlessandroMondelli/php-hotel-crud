@@ -18,10 +18,12 @@
 
 .button {
   border-radius: 5px;
-  padding: 10px 5px;
+  padding: 5px 5px;
   border: none;
   color: white;
   text-decoration: none;
+  margin-top: 15px;
+  cursor: pointer;
 }
 
 .button.ok {
@@ -110,5 +112,10 @@ main table tr {
 main table .button {
   margin-right: 15px;
   padding: 5px;
+  margin-top: 0px;
+}
+
+main .el {
+  display: inline-block;
 }
 
