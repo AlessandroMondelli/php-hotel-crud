@@ -7,10 +7,10 @@ if(!empty($_POST['id_stanza'])) {
     $sql = "DELETE FROM stanze WHERE id = $id_stanza"; //query per salvare nel db
     $result = esegui_query($sql);
 
-    header('Location: '.'index.php'); //Ritorno alla pagina principale
+    header('Location: '.'index.php?success=1'); //Ritorno alla pagina principale
 
 } else {
     $result = false;
-    header('Location: '.'index.php'); //Ritorno alla pagina principale
+    header('Location: '.'index.php?success=0'); //Ritorno alla pagina principale
 }
  ?>

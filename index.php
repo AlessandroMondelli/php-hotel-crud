@@ -14,6 +14,20 @@ include 'layout/head.php';
                 <a href="create-room.php" class="button ok">Crea una nuova stanza</a>
             </div>
         </div>
+        <div id="action-es">
+            <?php
+            $mess = $_GET["success"];
+            if ($mess >= 1) {
+            ?>
+                <p id="succ">Azione eseguita con successo!</p>
+            <?php
+            } elseif ($mess = 0) {
+            ?>
+                <p id="not-succ">Errore! Riprova</p>
+            <?php
+            }
+            ?>
+        </div>
         <div id="rooms-sec">
             <table>
                 <thead>

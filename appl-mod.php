@@ -10,10 +10,10 @@ if(!empty($_POST) && !empty($_POST['id_stanza']) && controlla_dati_stanza($_POST
     $sql = "UPDATE stanze SET room_number = $numero_stanza, floor = $piano, beds = $letti, updated_at = NOW() WHERE id = $id_stanza"; //Query per modifica
     $result = esegui_query($sql);
 
-    header('Location: '.'index.php'); //Ritorno alla pagina principale
+    header('Location: '.'index.php?success=1'); //Ritorno alla pagina principale
 
 } else {
     $result = false;
-    header('Location: '.'index.php'); //Ritorno alla pagina principale
+    header('Location: '.'index.php?success=0'); //Ritorno alla pagina principale
 }
  ?>
