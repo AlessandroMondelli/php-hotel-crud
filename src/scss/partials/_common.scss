@@ -5,6 +5,34 @@
 }
 
 .container {
-    width: 85%;
+    width: 70%;
     margin: 0 auto;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 10px 5px;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.button.ok {
+    background-color: #66B266;
+}
+
+.button.info {
+    background-color: #78CBFF;
+}
+
+.button.mod {
+    background-color: #FFAE19;
+}
+
+.button.el {
+    background-color: #FF3232;
+}
+
+.to-right {
+    float: right;
 }

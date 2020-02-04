@@ -11,6 +11,39 @@
   display: table;
 }
 
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 10px 5px;
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+
+.button.ok {
+  background-color: #66B266;
+}
+
+.button.info {
+  background-color: #78CBFF;
+}
+
+.button.mod {
+  background-color: #FFAE19;
+}
+
+.button.el {
+  background-color: #FF3232;
+}
+
+.to-right {
+  float: right;
+}
+
 header {
   height: 80px;
   background-color: black;
@@ -36,5 +69,37 @@ header #header-container ul {
 header #header-container ul li {
   display: inline-block;
   margin-left: 10px;
+}
+
+main {
+  margin: 30px 0;
+}
+
+main h2 {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+main table {
+  width: 100%;
+}
+
+main table thead {
+  text-align: left;
+}
+
+main table td,
+main table th {
+  border-bottom: 1px solid lightgrey;
+}
+
+main table tr {
+  height: 45px;
+  text-align: center;
+}
+
+main table .button {
+  margin-right: 15px;
+  padding: 5px;
 }
 
